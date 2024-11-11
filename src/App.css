@@ -23,12 +23,18 @@ body{
   margin-bottom: 20px;
   text-align: center;
 }
+.list{
+  padding: 0px 10px;
+}
 .list input{
   outline: none;
 }
-h5{
+.task{
   display: flex;
   justify-content: space-between;
+}
+.task .buttons{
+  margin-left: 10px;
 }
 .task button{
   border: none;
@@ -50,5 +56,9 @@ h5{
   }
   .footer{
       bottom: 20px;
+  }
+  .task .buttons{
+    min-width: 50%;
+    margin-left: 0px;
   }
 }

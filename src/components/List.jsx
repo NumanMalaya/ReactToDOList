@@ -51,9 +51,11 @@ export default function List() {
       </div>
       {tasks.length > 0 ? (
         tasks.map((task, index) => (
-          <h5 key={index} className="task bg-light text-dark p-3 rounded">
-            {task}
-            <span className="ms-4">
+          <div className="task bg-light text-dark p-3 my-2 rounded">
+            <h5 key={index} className="d-inline">
+              {task}
+            </h5>
+            <div className="buttons">
               <button className="bg-danger" onClick={() => deleteTask(index)}>
                 Delete
               </button>
@@ -63,8 +65,8 @@ export default function List() {
               <button className="bg-info" onClick={() => moveDownTask(index)}>
                 ▼
               </button>
-            </span>
-          </h5>
+            </div>
+        </div>
         ))
       ) : (
         <h3 className="text-center">Nothing here yet!</h3>
